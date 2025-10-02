@@ -50,7 +50,7 @@ async def optimize_bikeway(request: OptimizationRequest):
         budget_m = request.budget_km * 1000
         
         selected_new_edges = OptimizationService.qaoa_optimization(
-            candidate_edges, budget_m, poi_node_weights, request.lambda_cost
+            G, candidate_edges, budget_m, poi_node_weights, request.lambda_cost
         )
         print(f"      ✓ New edges selected: {len(selected_new_edges)}")
         

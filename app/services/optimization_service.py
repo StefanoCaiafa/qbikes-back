@@ -10,6 +10,7 @@ class OptimizationService:
     
     @staticmethod
     def qaoa_optimization(
+        G: nx.MultiDiGraph,
         candidate_edges: List[Tuple],
         budget_m: float,
         poi_node_weights: Dict[int, float],
@@ -25,6 +26,7 @@ class OptimizationService:
         problem for optimal bikeway selection.
         
         Args:
+            G: NetworkX MultiDiGraph with the street network from OpenStreetMap
             candidate_edges: List of candidate edges
             budget_m: Budget in meters
             poi_node_weights: Dictionary of node weights from POIs
