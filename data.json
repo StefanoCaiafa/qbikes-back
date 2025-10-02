@@ -10,6 +10,7 @@
       {"id": 1008, "lat": -34.9075, "lon": -56.1885, "tags": {"highway": "crossing", "name": "End Point"}}
     ],
     "ways": [
+      
       {
         "id": 5001,
         "nodes": [1001, 1002],
@@ -34,7 +35,7 @@
       {
         "id": 5004,
         "nodes": [1004, 1005],
-        "tags": {"highway": "primary", "name": "Avenida D", "access": "yes", "bicycle": "no"},
+        "tags": {"highway": "primary", "name": "Avenida D", "access": "yes", "bicycle": "yes"},
         "length_m": 200.0,
         "width_m": 8.0
       },
@@ -55,16 +56,9 @@
       {
         "id": 5007,
         "nodes": [1006, 1007],
-        "tags": {"highway": "tertiary", "name": "Ruta G", "access": "yes", "bicycle": "no"},
+        "tags": {"highway": "tertiary", "name": "Ruta G", "access": "yes", "bicycle": "yes"},
         "length_m": 180.0,
         "width_m": 7.0
-      },
-      {
-        "id": 5008,
-        "nodes": [1007, 1008],
-        "tags": {"highway": "residential", "name": "Calle H", "access": "yes", "bicycle": "yes"},
-        "length_m": 90.0,
-        "width_m": 4.0
       }
     ]
 }
