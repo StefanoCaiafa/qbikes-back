@@ -5,7 +5,11 @@ import numpy as np
 import os # Importar el módulo os
 
 
-from qiskit.primitives import Sampler, StatevectorSampler # Importar StatevectorSampler
+from qiskit.primitives import Sampler
+try:
+    from qiskit.primitives import StatevectorSampler
+except ImportError:
+    StatevectorSampler = None
 from qiskit_algorithms.minimum_eigensolvers import QAOA
 from qiskit_algorithms.optimizers import COBYLA
 from qiskit_optimization import QuadraticProgram
@@ -155,7 +159,10 @@ class QAOASolver:
         # construir QAOA
         # backend = Aer.get_backend('aer_simulator') # Ya no es necesario importar Aer
         # qi = QuantumInstance(backend, shots=self.shots, seed_simulator=self.seed, seed_transpiler=self.seed)
-        sampler = StatevectorSampler() # Usar StatevectorSampler en lugar de Sampler
+        if StatevectorSampler is not None:
+            sampler = StatevectorSampler() # Usar StatevectorSampler en lugar de Sampler
+        else:
+            sampler = Sampler()
 
         opt = COBYLA(maxiter=200)
         # qaoa = QAOA(optimizer=opt, reps=self.p, sampler=sampler) # Usar sampler en lugar de quantum_instance
