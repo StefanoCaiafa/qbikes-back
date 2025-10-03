@@ -1,0 +1,65 @@
+{
+    "nodes": [
+      {"id": 1001, "lat": -34.9033, "lon": -56.1882, "tags": {"highway": "traffic_signal", "name": "Start Point"}},
+      {"id": 1002, "lat": -34.9040, "lon": -56.1890, "tags": {"highway": "crossing"}},
+      {"id": 1003, "lat": -34.9038, "lon": -56.1875, "tags": {"amenity": "university", "name": "Universidad Central"}},
+      {"id": 1004, "lat": -34.9050, "lon": -56.1880, "tags": {"public_transport": "bus_stop", "name": "Parada Bus A"}},
+      {"id": 1005, "lat": -34.9060, "lon": -56.1900, "tags": {"highway": "traffic_signal"}},
+      {"id": 1006, "lat": -34.9055, "lon": -56.1870, "tags": {"amenity": "university", "name": "Universidad Este"}},
+      {"id": 1007, "lat": -34.9070, "lon": -56.1895, "tags": {"public_transport": "bus_stop", "name": "Parada Bus B"}},
+      {"id": 1008, "lat": -34.9075, "lon": -56.1885, "tags": {"highway": "crossing", "name": "End Point"}}
+    ],
+    "ways": [
+      
+      {
+        "id": 5001,
+        "nodes": [1001, 1002],
+        "tags": {"highway": "residential", "name": "Calle A", "access": "yes", "bicycle": "yes", "existing_bikepath": "yes"},
+        "length_m": 120.5,
+        "width_m": 6.0
+      },
+      {
+        "id": 5002,
+        "nodes": [1002, 1003],
+        "tags": {"highway": "residential", "name": "Calle B", "access": "yes", "bicycle": "yes"},
+        "length_m": 80.0,
+        "width_m": 4.0
+      },
+      {
+        "id": 5003,
+        "nodes": [1001, 1004],
+        "tags": {"highway": "service", "name": "Calle C", "access": "yes", "bicycle": "designated", "existing_bikepath": "yes"},
+        "length_m": 160.2,
+        "width_m": 3.0
+      },
+      {
+        "id": 5004,
+        "nodes": [1004, 1005],
+        "tags": {"highway": "primary", "name": "Avenida D", "access": "yes", "bicycle": "yes"},
+        "length_m": 200.0,
+        "width_m": 8.0
+      },
+      {
+        "id": 5005,
+        "nodes": [1003, 1006],
+        "tags": {"highway": "secondary", "name": "Camino E", "access": "yes", "bicycle": "yes"},
+        "length_m": 150.0,
+        "width_m": 5.0
+      },
+      {
+        "id": 5006,
+        "nodes": [1005, 1007],
+        "tags": {"highway": "residential", "name": "Calle F", "access": "yes", "bicycle": "yes"},
+        "length_m": 100.0,
+        "width_m": 4.0
+      },
+      {
+        "id": 5007,
+        "nodes": [1006, 1007],
+        "tags": {"highway": "tertiary", "name": "Ruta G", "access": "yes", "bicycle": "yes"},
+        "length_m": 180.0,
+        "width_m": 7.0
+      }
+    ]
+}
+  
