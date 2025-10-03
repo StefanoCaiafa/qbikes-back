@@ -152,3 +152,22 @@ qbikes-back/
 - **OSMnx** - Datos de OpenStreetMap
 - **NetworkX** - Análisis de grafos
 - **Pydantic** - Validación de datos
+- **Qiskit** - Optimización cuántica experimental (Árbol de Steiner)
+
+## 🧠 Ejemplo cuántico: Árbol de Steiner para ciclovías
+
+El repositorio incluye el script `steiner_tree_qaoa.py`, que construye un modelo QUBO del
+problema de Árbol de Steiner aplicado a la planificación de ciclovías. El modelo se resuelve
+utilizando **Qiskit** y QAOA (Quantum Approximate Optimization Algorithm), y visualiza el
+subgrafo óptimo con `networkx`.
+
+### Ejecutar el ejemplo
+
+```powershell
+pip install -r requirements.txt
+python steiner_tree_qaoa.py
+```
+
+El script utiliza los nodos y aristas de ejemplo contenidos en `data.json`, marca los
+terminales (universidades, plazas y estaciones) en rojo, los nodos de Steiner utilizados en
+azul y las aristas del árbol resultante en verde.
