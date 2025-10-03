@@ -1,0 +1,20 @@
+# data.py
+NODES = {
+    # id: { 'lat': float, 'lon': float, 'kind': 'street'|'poi'|'terminal', 'component': int }
+    1: {'lat': 9.93, 'lon': -84.08, 'kind': 'street',   'component': 1},
+    2: {'lat': 9.94, 'lon': -84.08, 'kind': 'street',   'component': 1},
+    3: {'lat': 9.95, 'lon': -84.08, 'kind': 'terminal', 'component': 1},  # p.ej. universidad
+    4: {'lat': 9.96, 'lon': -84.07, 'kind': 'street',   'component': 2},
+    5: {'lat': 9.97, 'lon': -84.07, 'kind': 'street',   'component': 2},
+}
+EDGES = [
+    # (u, v, {'length': float, 'name': str, 'inter_component': bool})
+    (1, 2, {'length': 0.8, 'name': 'Calle A', 'inter_component': False}),
+    (2, 3, {'length': 0.5, 'name': 'Calle B', 'inter_component': False}),
+    (4, 5, {'length': 0.6, 'name': 'Calle C', 'inter_component': False}),
+    # Candidatas “puente” entre componentes:
+    (2, 4, {'length': 1.2, 'name': 'Av. Conectora', 'inter_component': True}),
+]
+TERMINALS = [3]     # IDs de terminales obligatorios
+CANDIDATE_STEINER = [1,2,4,5]  # nodos no terminales que se pueden usar
+POI_PRIZES = { }    # opcional: {node_id: prize}
