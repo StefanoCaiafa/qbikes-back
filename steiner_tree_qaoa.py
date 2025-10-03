@@ -30,8 +30,7 @@ from qiskit_algorithms.optimizers import COBYLA
 from qiskit_optimization import QuadraticProgram
 from qiskit_optimization.algorithms import MinimumEigenOptimizer
 
-from qaoa import OSMGraph  # Reuse existing OSM loader
-from app.utils.geo_utils import haversine_distance
+from qaoa import OSMGraph, haversine_distance  # Reuse existing utilities
 
 
 logger = logging.getLogger(__name__)
